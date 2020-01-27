@@ -11,11 +11,13 @@ Object {
       >
         <div
           class="led green-led"
+          data-testid="locked-led"
         >
           Unlocked
         </div>
         <div
           class="led green-led"
+          data-testid="closed-led"
         >
           Open
         </div>
@@ -29,11 +31,13 @@ Object {
     >
       <div
         class="led green-led"
+        data-testid="locked-led"
       >
         Unlocked
       </div>
       <div
         class="led green-led"
+        data-testid="closed-led"
       >
         Open
       </div>

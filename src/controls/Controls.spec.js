@@ -20,5 +20,13 @@ test('toggledClosed is not called if lock button clicked & gate is locked', () =
 
 test('control panel renders', () => {
   const { getByTestId } = render(<Dashboard />);
-  getByTestId(/display/i);
+  getByTestId(/controls/i);
+});
+
+// CONTROLS provide buttons to toggle the `closed` and `locked` states
+
+test('close and lock buttons render', () => {
+  const { getByTestId } = render(<Controls />);
+  getByTestId(/close-btn/i);
+  getByTestId(/lock-btn/i);
 });

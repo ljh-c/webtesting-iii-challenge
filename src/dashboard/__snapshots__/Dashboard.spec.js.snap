@@ -11,11 +11,13 @@ Object {
       >
         <div
           class="led green-led"
+          data-testid="locked-led"
         >
           Unlocked
         </div>
         <div
           class="led green-led"
+          data-testid="closed-led"
         >
           Open
         </div>
@@ -26,12 +28,14 @@ Object {
       >
         <button
           class="toggle-btn"
+          data-testid="lock-btn"
           disabled=""
         >
           Lock Gate
         </button>
         <button
           class="toggle-btn"
+          data-testid="close-btn"
         >
           Close Gate
         </button>
@@ -45,11 +49,13 @@ Object {
     >
       <div
         class="led green-led"
+        data-testid="locked-led"
       >
         Unlocked
       </div>
       <div
         class="led green-led"
+        data-testid="closed-led"
       >
         Open
       </div>
@@ -60,12 +66,14 @@ Object {
     >
       <button
         class="toggle-btn"
+        data-testid="lock-btn"
         disabled=""
       >
         Lock Gate
       </button>
       <button
         class="toggle-btn"
+        data-testid="close-btn"
       >
         Close Gate
       </button>

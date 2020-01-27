@@ -1,5 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect';
 
 import Dashboard from '../dashboard/Dashboard';
 import Display from './Display';
@@ -52,4 +53,26 @@ test('displays unlocked if \'locked\' is false', () => {
     <Display locked={false} />
   );
   getByText(/Unlocked/i);
+});
+
+// * * * when `locked` or `closed` use the `red-led` class
+
+test('`locked` and `closed` led use the `red-led` class', () => {
+  const { getByTestId } = render(<Display locked={true} closed={true} />);
+  const lockedLed = getByTestId(/locked-led/i);
+  const closedLed = getByTestId(/closed-led/i);
+
+  expect(lockedLed).toHaveClass('red-led');
+  expect(closedLed).toHaveClass('red-led');
+});
+
+// * * * when `unlocked` or `open` use the `green-led` class
+
+test('`locked` and `closed` led use the `red-led` class', () => {
+  const { getByTestId } = render(<Display locked={false} closed={false} />);
+  const lockedLed = getByTestId(/locked-led/i);
+  const closedLed = getByTestId(/closed-led/i);
+
+  expect(lockedLed).toHaveClass('green-led');
+  expect(closedLed).toHaveClass('green-led');
 });
